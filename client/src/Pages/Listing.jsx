@@ -6,6 +6,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/bundle";
 import { useSelector } from "react-redux";
 import { FaBath, FaBed, FaChair, FaMapMarkedAlt, FaMapMarkerAlt, FaParking, FaShare } from "react-icons/fa";
+import Contact from "../components/Contact";
 
 export default function Listing() {
   SwiperCore.use([Navigation]);
@@ -128,8 +129,7 @@ export default function Listing() {
             {currentUser && listing.userRef !== currentUser._id && !contact && (
               <button
                 onClick={() => setContact(true)}
-                className='bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 p-3'
-              >
+                className='bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 p-3'>
                 Contact landlord
               </button>
             )}
